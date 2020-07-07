@@ -1,7 +1,8 @@
-console.log('Hello world!');
+'use strict';
 
-let string = 'Привет мир!';
-let number = 5;
-let bool = false;
-let und;
-console.log(und);
+const modalAdd = document.querySelector('.modal__add'),
+    addAd = document.querySelector('.add__ad');
+
+addAd.addEventListener('click', () => {
+    modalAdd.classList.remove('hide');
+});
