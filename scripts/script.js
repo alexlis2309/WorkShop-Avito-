@@ -31,25 +31,21 @@ const photoInfo = {};
 // Add Photo
 
 const addPhotoChangeHandler = (evt) => {
-const reader = new FileReader();
-
-const file = evt.target.files[0];
-
-photoInfo.name = file.name;
-photoInfo.size = file.size;
-
-reader.readAsBinaryString(file);
-
-reader.addEventListener("load", (evt) => {
-if (photoInfo.size < 200000) {
-    modalFileBtn.textContent = photoInfo.name;
-    photoInfo.base64 = btoa(event.target.result);
-    modalImageAdd.src = `data:image/jpeg;base64,${photoInfo.base64}`;
-} else {
-    modalFileBtn.textContent = "Воу воу! Не больше 200кб";
-    modalFileInput.value = "";
-}
-});
+    const reader = new FileReader();
+    const file = evt.target.files[0];
+    photoInfo.name = file.name;
+    photoInfo.size = file.size;
+    reader.readAsBinaryString(file);
+    reader.addEventListener("load", (evt) => {
+        if (photoInfo.size < 200000) {
+            modalFileBtn.textContent = photoInfo.name;
+            photoInfo.base64 = btoa(event.target.result);
+            modalImageAdd.src = `data:image/jpeg;base64,${photoInfo.base64}`;
+        } else {
+            modalFileBtn.textContent = "Воу воу! Не больше 200кб";
+            modalFileInput.value = "";
+        }
+    });
 };
 
 // modalAdd
@@ -80,14 +76,14 @@ const closeModalAdd = () => {
 modalAdd.addEventListener("click", (evt) => {
 if (evt.target === closeBtnAdd || evt.target === modalAdd) {
     closeModalAdd();
-}
+    }
 });
 
 const closeFormEscHandler = (evt) => {
 if (evt.keyCode === 27) {
     closeModalAdd();
     closeModalItem();
-}
+    }
 };
 
 const formInputHandler = () => {
@@ -101,7 +97,7 @@ const formSubmitHandler = (evt) => {
     let itemObj = {};
     for (const elem of modalInputElements) {
         itemObj[elem.name] = elem.value;
-}
+    }
     itemObj.image = photoInfo.base64;
     dataBase.push(itemObj);
     saveDataBase(); // save the object with add into localStorage
