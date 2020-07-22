@@ -61,7 +61,7 @@ button {
 
 .container {
   max-width: 1060px;
-  /*под проект*/
+  /*for project*/
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -79,6 +79,7 @@ button {
   margin-bottom: 15px;
   display: block;
 }
+
 .btn:hover {
   background-color: #009cf0;
 }
@@ -102,10 +103,12 @@ button {
   align-items: center;
   margin-bottom: 15px;
 }
+
 .menu__link {
   margin-right: 15px;
   color: #009cf0;
 }
+
 .menu__link:hover {
   color: #ff6163;
 }
@@ -114,10 +117,12 @@ button {
   display: flex;
   justify-content: space-between;
 }
+
 .search__label {
   flex-grow: 1;
   height: 30px;
 }
+
 .search__input {
   width: 100%;
   height: 100%;
@@ -125,6 +130,7 @@ button {
   border: 2px solid #ccc;
   border-right-width: 1px;
 }
+
 .search__btn {
   border: 2px solid #ccc;
   border-left-width: 1px;
@@ -147,20 +153,24 @@ button {
   display: flex;
   flex-direction: column;
 }
+
 .card__image {
   border: 1px solid #ccc;
   flex-grow: 1;
   object-fit: cover;
   max-height: 260px;
 }
+
 .card__description {
   padding: 15px;
 }
+
 .card__header {
   margin-top: 15px;
   color: #009cf0;
   font-weight: bold;
 }
+
 .card__price {
   margin-top: 10px;
   font-weight: bold;
@@ -177,6 +187,7 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 .modal__block {
   background-color: #fff;
   padding: 30px;
@@ -184,44 +195,55 @@ button {
   margin: 30px;
   position: relative;
 }
+
 .modal__image {
   max-width: 200px;
   border: 1px solid #ccc;
   margin-right: 15px;
 }
+
 .modal__header {
   margin-bottom: 15px;
 }
+
 .modal__submit label {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
+
 .modal__submit input {
   margin-left: 15px;
 }
+
 .modal__btn-submit {
   display: block;
   margin-top: 15px;
   margin-left: auto;
 }
+
 .modal__btn-submit:disabled, .modal__btn-submit[disabled] {
   background-color: #cccccc;
   color: #666666;
 }
+
 .modal__btn-block {
   display: flex;
   align-items: center;
 }
+
 .modal__btn-warning {
   color: #BF3F4A;
 }
+
 .modal__content {
   display: flex;
 }
+
 .modal__description p {
   margin-top: 10px;
 }
+
 .modal__file-input {
   width: 0.1px;
   height: 0.1px;
@@ -230,20 +252,25 @@ button {
   position: absolute;
   z-index: -1;
 }
+
 .modal__file-btn {
   line-height: 2;
   padding: 0 10px;
   text-align: center;
 }
+
 .modal__file-label {
   display: block !important;
 }
+
 .modal__file-label:hover {
   cursor: pointer;
 }
+
 .modal__file-label:hover span {
   background-color: #BF3F4A;
 }
+
 .modal__close {
   position: absolute;
   top: 24px;
@@ -253,6 +280,7 @@ button {
   font-size: 24px;
   line-height: 24px;
 }
+
 .modal__close:hover {
   color: #009cf0;
 }
